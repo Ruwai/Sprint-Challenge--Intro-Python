@@ -9,7 +9,7 @@ class City(object):
     self.lon = lon
 
   def __str__(self):
-    return f"{self.name}, {self.lat}, {self.lon}"
+    return "{}, {}, {}".format(self.name, self.lat, self.lon)
 
 # We have a collection of US cities with population over 750,000 stored in the
 # file "cities.csv". (CSV stands for "comma-separated values".)
@@ -37,7 +37,7 @@ def cityreader(cities=[]):
           count+=1
           cities.append(City(row[0], row[3], row[4]))
         else:
-          count+=1
+          count+=0
 
     return cities
 
